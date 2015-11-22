@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/styles.css">
+<template>
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <div class="main">
+        <nav>
+            <a href="/" id="logo"><img id="logo" src="img/Logo.png" alt="">
+            </a>
+            <ul class="link-ul">
+                <li class="link-li"><a href="/" class="link">Home</a>
+                </li>
+                <!--<li class="link-li"><a href="/work.html" class="link">Work</a>
+                </li>-->
+                <li class="link-li"><a href="/about.html" class="link">About</a>
+                </li>
+                <li class="link-li"><a href="/contact.html" class="link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</template>
+<script>
+    var link = document.querySelector('link[href="nav.html"] ');
+
+    // Clone the <template> in the import.
+    var template = link.import.querySelector('template');
+    var clone = document.importNode(template.content, true);
+
+    document.querySelector('#nav').appendChild(clone);
+
+    
+</script>
