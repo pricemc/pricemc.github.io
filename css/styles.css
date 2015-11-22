@@ -7,19 +7,31 @@
     justify-content: center;
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
+
 h3 {
     font-size: 24px;
 }
+
 footer {
     position: fixed;
     bottom: 0;
+    width: 100%;
     justify-content: center;
+    text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: grey;
 }
 
 #logo {
     height: 100px;
     width: 100px;
     opacity: .9;
+}
+
+#logo:hover {
+    opacity: 1;
 }
 
 .link {
@@ -30,20 +42,23 @@ footer {
     display: block;
     vertical-align: center;
     color: grey;
-    
 }
 
-.link:hover{
+.link:hover {
     color: black;
-    -webkit-transition: 1s; /* Safari */
+    -webkit-transition: 1s;
+    /* Safari */
+    
     transition: 1s;
 }
 
 .link-li {
-    display:flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
-    -webkit-transition: .5s; /* Safari */
+    -webkit-transition: .5s;
+    /* Safari */
+    
     transition: .5s;
 }
 
@@ -69,28 +84,33 @@ nav {
     flex-wrap: wrap;
 }
 
-.slideshow{
-    max-width:800px;
+.slideshow {
+    max-width: 800px;
     margin-top: 50px;
     max-height: 500px;
 }
+
 .slideshow figure {
     max-height: 500px;
-    width:100%;
-    max-width:800px;
+    width: 100%;
+    max-width: 800px;
     display: -webkit-flex;
-   display: flex;
-   -webkit-flex-direction: column /* works with row or column */
-   flex-direction: column;
-   -webkit-align-items: center;
-   align-items: center;
-   -webkit-justify-content: center;
-   justify-content: center;
+    display: flex;
+    -webkit-flex-direction: column
+    /* works with row or column */
+    
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
-.slideshow figure img{
+
+.slideshow figure img {
     max-height: 500px;
     max-width: 100%;
 }
+
 @media screen and (max-width: 480px) {
     body {
         max-height: 100%;
@@ -103,9 +123,16 @@ nav {
         margin-left: inherit;
         padding: 0;
         flex-direction: column;
+        margin-top: 10px;
     }
-    .slideshow{
+    .slideshow {
         margin-top: 0px;
         max-height: 100%;
+    }
+}
+
+@media screen and(max-height: 650px) {
+    footer {
+        position: absolute;
     }
 }
